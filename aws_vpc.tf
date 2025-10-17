@@ -1,4 +1,12 @@
+
 terraform {
+  cloud {
+    organization = "SRITEZ"
+    workspaces {
+      name = "Terraform"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
