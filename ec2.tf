@@ -1,14 +1,14 @@
 variable "low_cost_instance_type" {
   type        = string
   description = "Type of EC2 instance"
-  default     = "t3.nano"
+  default     = "t3.micro"
 }
 
 variable "ami_id" {
   type        = string
   description = "AMI ID to use for the instance"
   # Example here is Amazon Linux 2 AMI for us-east-1; replace with appropriate AMI for your region
-  default     = "ami-0c02fb55956c7d316"
+  default     = "ami-0341d95f75f311023"
 }
 
 # Create the EC2 instance resource
