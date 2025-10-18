@@ -1,6 +1,11 @@
-resource "aws_s3_bucket" "terraform-s3-bucket" {
-  bucket = "terraform-s3-bucket"
-  region = "eu-east-1"
+resource "random_id" "bucket_id" {
+  byte_length = 4
+}
+
+resource "aws_s3_bucket" "terraform_s3_bucket" {
+  bucket = "terraform-s3-bucket-${random_id.bucket_id.hex}"
+  # aws_s3_bucket_acl    = "private"
+
   tags = {
     creator = "sriteja"
     project = "terraform"
