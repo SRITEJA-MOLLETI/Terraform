@@ -4,7 +4,7 @@ resource "random_id" "bucket_id" {
 
 resource "aws_s3_bucket" "terraform_s3_bucket" {
   bucket = "terraform-s3-bucket-${random_id.bucket_id.hex}"
-  # aws_s3_bucket_acl    = "private"
+  acl    = "private"
 
   tags = {
     creator = "sriteja"
