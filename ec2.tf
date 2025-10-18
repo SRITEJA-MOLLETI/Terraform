@@ -12,12 +12,12 @@ variable "ami_id" {
 }
 
 # Create the EC2 instance resource
-resource "aws_instance" "low_cost_instance" {
-  ami           = var.ami_id
-  instance_type = var.low_cost_instance_type
+# resource "aws_instance" "low_cost_instance" {
+#   ami           = var.ami_id
+#   instance_type = var.low_cost_instance_type
 
-  tags = {
-    creator = "sriteja"
-    project = "terraform"
-  }
-}
+#   tags = {
+#     creator = "sriteja"
+#     project = "terraform"
+#   }
+# }
